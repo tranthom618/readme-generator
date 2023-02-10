@@ -1,9 +1,9 @@
-// TODO: Include packages needed for this application
+// Packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
 const generateMarkdown = require('./utils/generateMarkdown.js');
 
-// TODO: Create an array of questions for user input
+// An array of questions for user input
 const questions = [
     {   type: "input",
         name: "title", 
@@ -19,7 +19,7 @@ const questions = [
     {
         type: "input",
         name: "install", 
-        message: "Describe the installation instructions or process for a user to setup your project." 
+        message: "Describe the installation instructions or process for a user to setup your application." 
     },
 
     {
@@ -60,11 +60,23 @@ const questions = [
     },
 ];
 
-// TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+// // TODO: Create a function to write README file
+// function writeToFile(fileName, data) {} 
+// ^^^^IS ANY OF THIS EVEN NEEDED? PRETTY SURE THE SAME THING BELOW ACCOMPLISHES THIS
 
-// TODO: Create a function to initialize app
-function init() {}
+// Function to initialize app
+function init() {
+
+    inquirer.prompt(questions)
+
+    .then((answers) => {
+        const readmeContent = generateMarkdown(answers);
+
+        fs.writeFile('README.md', readmeContent, (err) =>
+        err ? console.log(err) : console.log('Successfully created readme.md!')
+        );
+    });
+}
 
 // Function call to initialize app
 init();
