@@ -53,6 +53,7 @@ function generateMarkdown(data) {
   // Saves the license from index.js to a variable so it can be called for 2 difference functions
   let licensePick = `${data.licenseSelect}`
 
+  // Boilerplate for the entire Readme formatting. Uses literal string interpolation to access user input from index.js
   return `
   # ${data.title}
 
@@ -95,7 +96,7 @@ function generateMarkdown(data) {
 
   ## Questions
   
-  GitHub Contact: [${data.github}](https://www.github.com/${data.github})
+  GitHub Contact: [github.com/${data.github}](https://www.github.com/${data.github})
 
   Email Contact: [${data.email}]
 `;

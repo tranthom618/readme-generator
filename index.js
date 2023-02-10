@@ -63,11 +63,14 @@ const questions = [
 // Function to initialize app
 function init() {
 
+    // Inquirer prompt, using the questions array
     inquirer.prompt(questions)
 
+    // Then after inquirer is executed, takes the answers and passes them to the generateMarkdown function that is located in utils/generateMarkdown.js
     .then((answers) => {
         const readmeContent = generateMarkdown(answers);
 
+        // File System for writing the 'README.md' file name, then readmeContent that is returned from generateMarkdown. Also provides error feedback in case there are issues.
         fs.writeFile('README.md', readmeContent, (err) =>
         err ? console.log(err) : console.log('Successfully created readme.md!')
         );

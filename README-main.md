@@ -26,6 +26,8 @@
 
   If Inquirer is installed, the user can type "node index.js" into the command line terminal to start the application. Once the application is started, a series of questions will be asked of the user to fill in the sections of their readme.
 
+  [Instructional Demonstration Video](https://drive.google.com/file/d/1xIytMSceha8zwCgds2lEcO-L768fqpcQ/view)
+
   ## Contributing
 
   A readme is fairly simple and straightforward, so there won't be a large number of useful features to add. Perhaps a more expansive selection of different license types would be one example, though the current 5 available to select comprise about 85% of all GitHub projects. A more robust contribution would be a dedicated User Interface to provide easier execution instead of through the command line terminal.
@@ -40,6 +42,6 @@
 
   ## Questions
   
-  GitHub Contact: [tranthom618](https://www.github.com/tranthom618)
+  GitHub Contact: [github.com/tranthom618](https://www.github.com/tranthom618)
 
   Email Contact: [thomas.tran2311@gmail.com]
