@@ -31,7 +31,7 @@ const questions = [
     {
         type: "list",
         name: "licenseSelect", 
-        message: "Choose from the following list of the most used standard licenses:" ,
+        message: "Choose from the following list of the most used standard licenses (Up/Down Arrows Keys to move, Enter to select):" ,
         choices: ['MIT', 'GPLv2', 'Apache', 'GPLv3', 'BSD 3-clause']
     },
 
@@ -59,10 +59,6 @@ const questions = [
         message: "What is your email address?" 
     },
 ];
-
-// // TODO: Create a function to write README file
-// function writeToFile(fileName, data) {} 
-// ^^^^IS ANY OF THIS EVEN NEEDED? PRETTY SURE THE SAME THING BELOW ACCOMPLISHES THIS
 
 // Function to initialize app
 function init() {
